@@ -48,7 +48,6 @@ vnoremap . :norm.<CR>
 nnoremap <C-j> :cnext<CR>zz
 nnoremap <C-k> :cprev<CR>zz
 
-nnoremap <leader>gs :G<CR>
 nnoremap <leader>pv :Ex<CR>
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd _=<cr>
