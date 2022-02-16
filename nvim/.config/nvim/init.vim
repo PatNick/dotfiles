@@ -7,6 +7,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'neovim/nvim-lspconfig'
 
