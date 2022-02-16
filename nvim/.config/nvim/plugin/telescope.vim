@@ -1,9 +1,9 @@
 "Telescope
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>pf <cmd>Telescope find_files<cr>
+nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>gc <cmd>Telescope git_branches<cr>
 
 lua << EOF
