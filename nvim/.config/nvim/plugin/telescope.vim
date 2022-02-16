@@ -1,6 +1,6 @@
 "Telescope
-nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 
+nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <leader>pf <cmd>Telescope find_files<cr>
 nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
