@@ -44,8 +44,8 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap . :norm.<CR>
 
-nnoremap [c :cprev<CR>zz
-nnoremap ]c :cnext<CR>zz
+nnoremap <C-j> :cnext<CR>zz
+nnoremap <C-k> :cprev<CR>zz
 
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>pv :Ex<CR>
