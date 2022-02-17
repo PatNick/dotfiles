@@ -132,7 +132,7 @@ compinit
 
 bindkey -v
 source /usr/share/fzf/shell/key-bindings.zsh
-source ~/.dotfiles/completion.zsh
+source ~/completion.zsh
 
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "[\"<Alt>1\"]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "[\"<Alt>2\"]"
