@@ -30,7 +30,7 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 syntax on
-colorscheme gotham256
+colorscheme gotham
 
 nnoremap <SPACE> <Nop>
 let mapleader=' '

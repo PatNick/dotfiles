@@ -1,5 +1,5 @@
 let g:airline_symbols_ascii = 1
-let g:airline_theme='gotham256'
+let g:airline_theme='gotham'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
