@@ -35,12 +35,6 @@ colorscheme gotham256
 nnoremap <SPACE> <Nop>
 let mapleader=' '
 
-nnoremap j gj
-nnoremap k gk
-
-nnoremap gj j
-nnoremap gk k
-
 nnoremap Y y$
 
 vnoremap < <gv
