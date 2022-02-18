@@ -1,4 +1,4 @@
-set t_Co=256
+set termguicolors
 set background=dark
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20
 set nowrap
