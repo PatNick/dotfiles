@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-languages=`echo "golang cpp c java python" | tr ' ' '\n'`
+languages=`echo "golang lua cpp c java python" | tr ' ' '\n'`
 core_utils=`echo "tmux btrfs xargs find mv sed awk" | tr ' ' '\n'`
 
 selected=`printf "$languages\n$core_utils" | fzf`
