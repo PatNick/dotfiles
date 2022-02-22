@@ -25,7 +25,7 @@ require('telescope').setup{
     extensions = {
         fzf = {
             fuzzy = true,
-            override_generic_sorter = true,
+            override_generic_sorter = false,
             override_file_sorter = true,
             case_mode = "smart_case"
         }
@@ -33,3 +33,14 @@ require('telescope').setup{
 }
 
 require('telescope').load_extension('fzf')
+
+local M = {}
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< VimRC >",
+        hidden = true,
+        cwd = "~/.dotfiles/nvim/.config/nvim",
+    })
+end
+
+return M
