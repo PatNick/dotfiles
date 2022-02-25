@@ -17,4 +17,4 @@ nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
 nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>
 nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>
 nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
-nnoremap <leader>vca :lua vim.lsp.buf.code_actions()<CR>
+nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>

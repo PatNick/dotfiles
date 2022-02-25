@@ -2,7 +2,8 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'whatyouhide/vim-gotham'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -27,13 +28,13 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 
 Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 
 call plug#end()
 
 syntax on
-colorscheme gotham
 
 nnoremap <SPACE> <Nop>
 let mapleader=' '
@@ -55,7 +56,12 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+nnoremap n nzzzv
+nnoremap N Nzzzv
 nnoremap J mzJ`z
+
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count :"") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count :"") . 'j'
 
 "Misc
 filetype plugin indent on
