@@ -4,6 +4,7 @@ local nightfox = require('nightfox')
 -- it will be taken from the default configuration above
 nightfox.setup({
   fox = "nightfox",
+  transparent = false,
   alt_nc = true,
   styles = {
     comments = "italic", -- change style of comments to be italic
