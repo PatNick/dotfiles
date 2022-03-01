@@ -5,7 +5,6 @@ require'lspconfig'.gopls.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.jdtls.setup{ cmd = {'jdtls'} }
-
 EOF
 
 set completeopt=menu,menuone,noselect
