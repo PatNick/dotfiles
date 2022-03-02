@@ -17,7 +17,6 @@ local my_attach = function()
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsd', '<cmd> Telescope diagnostics<cr>', opts)
 end
 
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -33,13 +32,13 @@ require('lspconfig')['jdtls'].setup {
 }
 
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip = require('luasnip')
 
 -- lspkind
 local lspkind = require('lspkind')
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+local cmp = require('cmp')
 cmp.setup {
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
