@@ -37,6 +37,8 @@ syntax on
 nnoremap <SPACE> <Nop>
 let mapleader=' '
 
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
 nnoremap Y y$
 
 vnoremap < <gv

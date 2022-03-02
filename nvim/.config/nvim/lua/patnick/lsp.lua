@@ -2,13 +2,26 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+local opts = { noremap=true, silent=true }
 local lspconfig = require('lspconfig')
 
+local my_attach = function()
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd> lua vim.lsp.buf.hover()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vd', '<cmd> lua vim.lsp.buf.definition()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vi', '<cmd> lua vim.lsp.buf.implementation()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsh', '<cmd> lua vim.lsp.buf.signature_help()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vrr', '<cmd> lua vim.lsp.buf.references()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vrn', '<cmd> lua vim.lsp.buf.rename()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd> lua vim.diagnostic.goto_prev()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd> lua vim.diagnostic.goto_next()<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsd', '<cmd> Telescope diagnostics<cr>', opts)
+end
+
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'gopls', 'pyright', 'vimls', 'bashls', 'ansiblels' }
+local servers = { 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
-        -- on_attach = my_custom_on_attach,
+        on_attach = my_attach,
         capabilities = capabilities,
     }
 end
@@ -16,6 +29,7 @@ end
 require('lspconfig')['jdtls'].setup {
     cmd = { 'jdtls' },
     capabilities = capabilities,
+    on_attach = my_attach,
 }
 
 -- luasnip setup
