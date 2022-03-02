@@ -14,7 +14,8 @@ for _, lsp in ipairs(servers) do
 end
 
 require('lspconfig')['jdtls'].setup {
-    cmd = { 'jdtls' }
+    cmd = { 'jdtls' },
+    capabilities = capabilities,
 }
 
 -- luasnip setup
@@ -40,8 +41,8 @@ cmp.setup {
     },
     sources = {
         { name = 'nvim_lsp' },
-        { name = 'path' },
         { name = 'luasnip' },
+        { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
     },
     snippet = {
