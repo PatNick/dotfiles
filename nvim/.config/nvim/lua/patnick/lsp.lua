@@ -42,6 +42,7 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'nvim_lua' },
         { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
     },
@@ -57,7 +58,8 @@ cmp.setup {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
                 path = "[path]",
-                luasnip = "[snip]"
+                luasnip = "[snip]",
+                nvim_lua = "[API]",
             }
         },
     },
