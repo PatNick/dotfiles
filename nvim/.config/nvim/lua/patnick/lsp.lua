@@ -2,9 +2,9 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local opts = { noremap=true, silent=true }
 local lspconfig = require('lspconfig')
 
+local opts = { noremap=true, silent=true }
 local my_attach = function()
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd> lua vim.lsp.buf.hover()<cr>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vd', '<cmd> lua vim.lsp.buf.definition()<cr>', opts)
