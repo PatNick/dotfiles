@@ -182,17 +182,28 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.config/i3status/config
+    status_command i3status --config ~/.config/i3status/config
+    colors {
+        background #192330
+        statusline #CDCECF
+        separator  #DFDFE0
+
+        focused_workspace  #4C7899 #285577 #FFFFFF
+        active_workspace   #333333 #222222 #FFFFFF
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2F343A #C94F6D #FFFFFF
+        binding_mode       #2F343A #C94F6D #FFFFFF
+    }
 }
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #192330 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# class                 border  bground text    indicator child_border
+client.focused          #393B44 #192330 #CDCECF #719CD6   #393B44
+client.focused_inactive #393B44 #000000 #CDCECF #484E50   #393B44
+client.unfocused        #393B44 #32343B #CDCECF #292D2E   #393B44
+client.urgent           #393B44 #C94F6D #CDCECF #C94F6D   #393B44
+client.placeholder      #393B44 #32343B #CDCECF #000000   #393B44
 
-client.background       #192330
+client.background       #DFDFE0
 
 bindsym $mod+Control+l exec i3lock -c 192330
 
