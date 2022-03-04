@@ -15,6 +15,7 @@ local my_attach = function()
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd> lua vim.diagnostic.goto_prev()<cr>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd> lua vim.diagnostic.goto_next()<cr>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsd', '<cmd> Telescope diagnostics<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ff', '<cmd> lua vim.lsp.buf.formatting()<cr>', opts)
 end
 
 local servers = { 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
