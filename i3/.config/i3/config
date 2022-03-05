@@ -109,7 +109,7 @@ bindsym $mod+a focus parent
 # bindsym $mod+d focus child
 
 # Default workspace layout
-workspace_layout stacking
+# workspace_layout tabbed
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
