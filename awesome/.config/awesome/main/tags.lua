@@ -5,10 +5,18 @@ local _M = {}
 function _M.get()
     tags = {}
 
+    local tagpairs = {
+        names = {
+            "DEV", "WWW", "GFX", "SYS", "CHAT"
+        },
+
+        layout = {
+            RC.layouts[1], RC.layouts[3], RC.layouts[3], RC.layouts[6], RC.layouts[1]
+        }
+    }
+
     awful.screen.connect_for_each_screen(function(s)
-        tags[s] = awful.tag(
-            { "1", "2", "3", "4", "5", "6", "7", "8", "9", }, s, RC.layouts[1]
-        )
+        tags[s] = awful.tag(tagpairs.names, s, tagpairs.layout)
     end)
 
     return tags
