@@ -11,7 +11,7 @@ function _M.get()
         },
 
         layout = {
-            RC.layouts[2], RC.layouts[1], RC.layouts[3], RC.layouts[6], RC.layouts[1]
+            RC.layouts[1], RC.layouts[1], RC.layouts[2], RC.layouts[1], RC.layouts[1]
         }
     }
 
