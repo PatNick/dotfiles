@@ -7,11 +7,11 @@ function _M.get()
 
     local tagpairs = {
         names = {
-            "DEV", "WWW", "GFX", "SYS", "CHAT"
+            "WWW", "DEV", "GFX", "SYS", "CHAT"
         },
 
         layout = {
-            RC.layouts[4], RC.layouts[2], RC.layouts[3], RC.layouts[6], RC.layouts[1]
+            RC.layouts[2], RC.layouts[1], RC.layouts[3], RC.layouts[6], RC.layouts[1]
         }
     }
 
