@@ -4,7 +4,12 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = "maintained",
+    ensure_installed = {
+        "c", "cpp",
+        "go", "python", "java",
+        "bash", "json", "lua",
+        "vim",
+    },
     sync_install = false,
     ignore_install = { "" },
     highlight = {
