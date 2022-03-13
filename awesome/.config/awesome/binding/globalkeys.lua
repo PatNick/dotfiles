@@ -94,7 +94,7 @@ function _M.get()
 
         -- Prompt
         awful.key({ modkey },            "r",     function ()
-            awful.spawn("rofi -show run") end,
+            awful.spawn("rofi -show drun") end,
                   {description = "run prompt", group = "launcher"}),
 
         awful.key({ modkey }, "x",

@@ -16,22 +16,23 @@ theme.font          = "Source Code Pro Medium 10"
 theme.bg_normal     = "#10161f"
 theme.bg_focus      = "#192330"
 theme.bg_urgent     = "#c94f6d"
-theme.bg_minimize   = "#393b44"
+theme.bg_minimize   = "#10161f"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = "#dfdfe0"
+theme.fg_focus      = "#719cd6"
+theme.fg_urgent     = "#c94f6d"
+theme.fg_minimize   = "#dfdfe0"
 
 theme.useless_gap   = dpi(4)
+theme.gap_single_clinet = false
 theme.border_width  = dpi(2)
-theme.border_normal = "#192330"
+theme.border_normal = "#dfdfe0"
 theme.border_focus  = "#719cd6"
 theme.border_marked = "#91231c"
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(5)
+local taglist_square_size = dpi(2)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
     taglist_square_size, theme.fg_normal
 )
@@ -73,7 +74,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maimized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "~/Pictures/Wallpapers/aperture.png"
+theme.wallpaper = "~/Pictures/Wallpapers/nord_fedora.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

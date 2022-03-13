@@ -5,6 +5,9 @@ local awful = require("awful")
 -- Wibox handling library
 local wibox = require("wibox")
 
+-- Vicious
+local vicious = require("vicious")
+
 -- Custom Local Library: Common Functional Decoration
 local deco = {
   wallpaper = require("deco.wallpaper"),
@@ -20,7 +23,13 @@ local _M = {}
 -- Wibar
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textbox()
+vicious.register(mytextclock, vicious.widgets.date, "%d-%m-%Y | %r")
+
+-- Mem
+memwidget = wibox.widget.textbox()
+vicious.cache(vicious.widgets.mem)
+vicious.register(memwidget, vicious.widgets.mem, "$1 ($2MiB/$3MiB)", 13)
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper

@@ -73,3 +73,4 @@ require("main.signals")
 
 awful.util.spawn("compton")
 awful.util.spawn("xset r rate 200 25")
+awful.util.spawn("/usr/libexec/gsd-xsettings")
