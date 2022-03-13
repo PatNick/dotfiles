@@ -220,3 +220,4 @@ bindsym $mod+Control+l exec i3lock -c 192330
 exec_always nitrogen --restore
 exec_always compton
 exec_always xset r rate 200 25
+exec /usr/libexec/gsd-xsettings
