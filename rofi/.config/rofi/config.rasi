@@ -145,6 +145,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-//@theme "solarized"
-//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
 @theme "/usr/share/rofi/themes/android_notification.rasi"
