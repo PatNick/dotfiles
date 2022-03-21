@@ -8,7 +8,6 @@ set nohlsearch
 set incsearch
 set hidden
 set scrolloff=8
-set clipboard=unnamedplus
 set cmdheight=1
 set colorcolumn=80
 set signcolumn=yes
