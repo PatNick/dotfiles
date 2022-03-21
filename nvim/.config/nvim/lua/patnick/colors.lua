@@ -4,15 +4,15 @@ local nightfox = require('nightfox')
 -- it will be taken from the default configuration above
 nightfox.setup({
     options = {
-        transparent = true,
-        dim_inactive = false,
+        transparent = false,
+        dim_inactive = true,
         styles = {
             comments = "italic", -- change style of comments to be italic
             keywords = "bold", -- change style of keywords to be bold
             functions = "italic,bold" -- styles can be a comma separated list
         },
         inverse = {
-            match_paren = false, -- inverse the highlighting of match_parens
+            match_paren = false,
             visual = false,
             search = true,
         },
