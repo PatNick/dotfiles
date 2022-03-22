@@ -16,19 +16,6 @@ nightfox.setup({
             visual = true,
             search = true,
         },
-        hlgroups = {
-            TSPunctDelimiter = { fg = "${red}" }, -- Override a highlight group with the color red
-            LspCodeLens = { bg = "#000000", style = "italic" },
-            TelescopeBorder = { fg = "${fg_popup}", bg = "${bg_popup}" },
-            TelescopePromptBorder = { fg = "${fg_visual}", bg = "${bg_visual}" },
-            TelescopePromptNormal = { fg = "${fg_sidebar}", bg = "${bg_visual}" },
-            TelescopePromptPrefix = { fg = "${fg_sidebar}", bg = "${bg_visual}" },
-            TelescopeNormal = { fg = "${fg_sidebar}", bg = "${bg_popup}" },
-            TelescopePreviewTitle = { fg = "${bg_popup}", bg = "${blue}" },
-            TelescopePromptTitle = { fg = "${bg_popup}", bg = "${blue}" },
-            TelescopeResultsTitle = { fg = "${bg_popup}", bg = "${blue}" },
-            TelescopeMatching = { fg = "${error}", bg = "${NONE}" },
-        },
     },
 })
 
