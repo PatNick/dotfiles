@@ -13,7 +13,7 @@ nightfox.setup({
         },
         inverse = {
             match_paren = false,
-            visual = false,
+            visual = true,
             search = true,
         },
         hlgroups = {
