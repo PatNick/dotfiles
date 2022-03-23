@@ -14,6 +14,16 @@ nightfox.setup({
             visual = true,
             search = true,
         },
+        modules = {
+            telescope = true,
+            cmp = true,
+            native_lsp = true,
+            treesitter = true,
+        },
+    },
+    groups = {
+        LineNr = { fg = "grey" },
+        TSPunctDelimiter = { fg = "pallet.red" },
     },
 })
 
