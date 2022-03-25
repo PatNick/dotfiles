@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="nvim"
+alias docker="podman"
 export EDITOR='nvim'
 
 export PYENV_ROOT="$HOME/.pyenv"
