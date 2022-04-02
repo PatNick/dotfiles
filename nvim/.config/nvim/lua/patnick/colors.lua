@@ -16,9 +16,9 @@ nightfox.setup({
         },
     },
     groups = {
-        LineNr = { fg = "pallet.fg" },
-        LineNrAbove = { fg = "pallet.black" },
-        LineNrBelow = { fg = "pallet.black" },
+        LineNr = { fg = "white" },
+        LineNrAbove = { fg = "grey" },
+        LineNrBelow = { fg = "grey" },
         TSPunctDelimiter = { fg = "pallet.red" },
     },
 })
