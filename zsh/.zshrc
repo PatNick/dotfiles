@@ -135,13 +135,6 @@ bindkey -v
 source /usr/share/fzf/shell/key-bindings.zsh
 source ~/completion.zsh
 
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "[\"<Alt>1\"]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "[\"<Alt>2\"]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "[\"<Alt>3\"]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "[\"<Alt>4\"]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "[\"<Alt>5\"]"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "[\"<Alt>6\"]"
-
 alias -g Z='| fzf'
 
 ## File Manager Key Binds
