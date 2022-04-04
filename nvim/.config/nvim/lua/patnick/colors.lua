@@ -14,6 +14,10 @@ nightfox.setup({
             visual = true,
             search = true,
         },
+        modules = {
+            telescope = true,
+            cmp = true,
+        },
     },
     groups = {
         LineNr = { fg = "white" },
