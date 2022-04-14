@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 languages=`echo "golang lua cpp c java python" | tr ' ' '\n'`
-core_utils=`echo "i3 tmux btrfs xargs find mv sed awk" | tr ' ' '\n'`
+core_utils=`echo "git i3 tmux btrfs xargs find mv sed awk" | tr ' ' '\n'`
 
 selected=`printf "$languages\n$core_utils" | fzf`
 read -p "query: " query
