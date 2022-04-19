@@ -1,5 +1,7 @@
 local nightfox = require('nightfox')
 
+local palette = require('nightfox.palette').load('nightfox')
+
 nightfox.setup({
     options = {
         transparent = false,
@@ -20,10 +22,10 @@ nightfox.setup({
         },
     },
     groups = {
-        LineNr = { fg = "white" },
+        LineNr = { fg = "palette.orange" },
         LineNrAbove = { fg = "grey" },
         LineNrBelow = { fg = "grey" },
-        TSPunctDelimiter = { fg = "pallet.red" },
+        TSPunctDelimiter = { fg = "palette.red" },
     },
 })
 
