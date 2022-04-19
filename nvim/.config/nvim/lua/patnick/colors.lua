@@ -23,8 +23,8 @@ nightfox.setup({
     },
     groups = {
         LineNr = { fg = "palette.orange" },
-        LineNrAbove = { fg = "palette.comment" },
-        LineNrBelow = { fg = "palette.comment" },
+        LineNrAbove = { fg = "palette.bg4" },
+        LineNrBelow = { fg = "palette.bg4" },
         TSPunctDelimiter = { fg = "palette.red" },
     },
 })
