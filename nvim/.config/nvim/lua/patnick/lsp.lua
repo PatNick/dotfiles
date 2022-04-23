@@ -5,18 +5,19 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 local opts = { noremap=true, silent=true }
-local my_attach = function()
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd> lua vim.lsp.buf.hover()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vd', '<cmd> lua vim.lsp.buf.definition()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vi', '<cmd> lua vim.lsp.buf.implementation()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsh', '<cmd> lua vim.lsp.buf.signature_help()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vrr', '<cmd> lua vim.lsp.buf.references()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vrn', '<cmd> lua vim.lsp.buf.rename()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vca', '<cmd> lua vim.lsp.buf.code_action()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>vsd', '<cmd> Telescope diagnostics<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ff', '<cmd> lua vim.lsp.buf.formatting()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd> lua vim.diagnostic.goto_prev()<cr>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd> lua vim.diagnostic.goto_next()<cr>', opts)
+local my_attach = function(client, buffer)
+
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
+    vim.keymap.set('n', '<leader>vd', vim.lsp.buf.definition, {buffer=0})
+    vim.keymap.set('n', '<leader>vi', vim.lsp.buf.implementation, {buffer=0})
+    vim.keymap.set('n', '<leader>vsh', vim.lsp.buf.signature_help, {buffer=0})
+    vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, {buffer=0})
+    vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename, {buffer=0})
+    vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action, {buffer=0})
+    vim.keymap.set('n', '<leader>vsd', '<cmd>Telescope diagnostics<cr>', {buffer=0})
+    vim.keymap.set('n', '<leader>ff', vim.lsp.buf.formatting, {buffer=0})
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {buffer=0})
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {buffer=0})
 end
 
 local servers = { 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
