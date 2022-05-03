@@ -6,7 +6,6 @@ local lspconfig = require('lspconfig')
 
 local opts = { noremap=true, silent=true }
 local my_attach = function(client, buffer)
-
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
     vim.keymap.set('n', '<leader>vd', vim.lsp.buf.definition, {buffer=0})
     vim.keymap.set('n', '<leader>vi', vim.lsp.buf.implementation, {buffer=0})
@@ -43,18 +42,15 @@ local lspkind = require('lspkind')
 -- nvim-cmp setup
 local cmp = require('cmp')
 cmp.setup {
-    mapping = {
+    mapping = cmp.mapping.preset.insert({
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
-        ['<C-y'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Insert,
-            select = true,
-        },
-    },
+        ['<C-y'] = cmp.mapping.confirm({ select = true }),
+    }),
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
