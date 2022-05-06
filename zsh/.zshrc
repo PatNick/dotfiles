@@ -117,7 +117,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
 
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-17.0.2.0.8-1.fc35.x86_64/"
+export JAVA_HOME="/usr/lib/jvm/jre-17-openjdk"
 export JDK_HOME="/usr/lib/jvm/java-17-openjdk-17.0.2.0.8-1.fc35.x86_64/"
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
