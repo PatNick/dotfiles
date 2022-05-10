@@ -22,10 +22,12 @@ nightfox.setup({
         },
     },
     groups = {
-        LineNr = { fg = "palette.orange" },
-        LineNrAbove = { fg = "palette.bg4" },
-        LineNrBelow = { fg = "palette.bg4" },
-        TSPunctDelimiter = { fg = "palette.red" },
+        all = {
+            LineNr = { fg = "palette.orange" },
+            LineNrAbove = { fg = "palette.bg4" },
+            LineNrBelow = { fg = "palette.bg4" },
+            TSPunctDelimiter = { fg = "palette.red" },
+        }
     },
 })
 
