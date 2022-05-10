@@ -31,6 +31,9 @@ require('lspconfig')['jdtls'].setup {
     cmd = { 'jdtls' },
     capabilities = capabilities,
     on_attach = my_attach,
+    root_dir = function(fname)
+        return require'lspconfig'.util.root_pattern('pom.xml', 'gradle.build', '.git')(fname) or vim.fn.getcwd()
+    end
 }
 
 -- luasnip setup
