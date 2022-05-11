@@ -27,7 +27,7 @@ nightfox.setup({
             LineNrAbove = { fg = "palette.bg4" },
             LineNrBelow = { fg = "palette.bg4" },
             TSPunctDelimiter = { fg = "palette.red" },
-        }
+        },
     },
 })
 
