@@ -118,9 +118,9 @@ export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
 
 export JAVA_HOME="/usr/lib/jvm/jre-17-openjdk"
-export JDK_HOME="/usr/lib/jvm/java-17-openjdk-17.0.2.0.8-1.fc35.x86_64/"
+export JDK_HOME="/usr/lib/jvm/java-17-openjdk"
 
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
