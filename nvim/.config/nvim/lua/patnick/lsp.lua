@@ -19,7 +19,7 @@ local my_attach = function(client, buffer)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {buffer=0})
 end
 
-local servers = { 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
+local servers = { 'tsserver', 'clangd', 'pyright', 'gopls', 'vimls', 'bashls', 'ansiblels' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = my_attach,
