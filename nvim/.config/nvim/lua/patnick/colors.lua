@@ -37,5 +37,6 @@ vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_hide_inactive_statusline = true
 vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+vim.g.tokyonight_lualine_bold = true
 
 vim.cmd[[colorscheme tokyonight]]
