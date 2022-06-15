@@ -66,6 +66,9 @@ nnoremap J mzJ`z
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count :"") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count :"") . 'j'
 
+nnoremap <leader>ee oif err != nil {<CR>return nil, err<CR>}<CR><esc>kkI<esc>
+
+
 "Misc
 filetype plugin indent on
 
