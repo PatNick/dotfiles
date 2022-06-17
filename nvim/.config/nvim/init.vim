@@ -42,6 +42,8 @@ let mapleader=' '
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
+nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
+
 nnoremap Y y$
 
 vnoremap < <gv
