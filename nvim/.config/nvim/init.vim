@@ -32,6 +32,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'mfussenegger/nvim-dap'
+Plug 'leoluz/nvim-dap-go'
+
+Plug 'ThePrimeagen/refactoring.nvim'
 
 call plug#end()
 

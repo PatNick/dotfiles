@@ -82,3 +82,6 @@ cmp.setup {
         ghost_text = true,
     }
 }
+
+-- nvim-dap - go
+require("dap-go").setup()
