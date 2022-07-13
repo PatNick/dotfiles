@@ -34,6 +34,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-telescope/telescope-dap.nvim'
 
 Plug 'ThePrimeagen/refactoring.nvim'
 
