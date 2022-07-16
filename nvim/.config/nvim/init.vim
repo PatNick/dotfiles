@@ -36,6 +36,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'nvim-telescope/telescope-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
 
 Plug 'ThePrimeagen/refactoring.nvim'
 
@@ -51,6 +52,10 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
 nnoremap Y y$
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nmap <leader>Y "+Y
 
 vnoremap < <gv
 vnoremap > >gv
