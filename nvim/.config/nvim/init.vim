@@ -22,6 +22,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'preservim/nerdcommenter'
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -35,10 +36,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
 Plug 'rcarriga/nvim-dap-ui'
-Plug 'nvim-telescope/telescope-dap.nvim'
-Plug 'theHamsta/nvim-dap-virtual-text'
-
-Plug 'ThePrimeagen/refactoring.nvim'
 
 call plug#end()
 
@@ -65,12 +62,13 @@ nnoremap ]c :cnext<CR>zz
 nnoremap [c :cprev<CR>zz
 
 nnoremap <leader>pv :Ex<CR>
-nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
-nnoremap <leader>= :wincmd _=<cr>
 nnoremap <leader>x :silent !chmod +x %<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
