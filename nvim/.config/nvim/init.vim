@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'EdenEast/nightfox.nvim', { 'branch': 'main' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'gruvbox-community/gruvbox'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
