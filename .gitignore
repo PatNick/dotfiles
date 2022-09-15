@@ -1,3 +1,5 @@
 __pycache__/
 neomutt/
 offlineimap/
+bin/.local/bin/exercism
+bin/.local/bin/ia
