@@ -36,6 +36,12 @@ require('lspconfig')['jdtls'].setup {
     end
 }
 
+require("lspconfig").rust_analyzer.setup({
+    cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+    capabilities = capabilities,
+    on_attach = my_attach,
+})
+
 -- luasnip setup
 local luasnip = require('luasnip')
 

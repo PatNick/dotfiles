@@ -3,3 +3,4 @@ neomutt/
 offlineimap/
 bin/.local/bin/exercism
 bin/.local/bin/ia
+bin/.local/bin/rust-analyzer
