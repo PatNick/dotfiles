@@ -2,7 +2,7 @@
 lua require("patnick")
 
 nnoremap <C-p> <cmd>Telescope git_files<cr>
-nnoremap <leader>pf <cmd>Telescope find_files<cr>
+nnoremap <leader>pf <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>ps <cmd>lua require('telescope.builtin').grep_string({ search=vim.fn.input("Grep For > ") })<CR>
 
 nnoremap <leader>pb <cmd>Telescope buffers<cr>
