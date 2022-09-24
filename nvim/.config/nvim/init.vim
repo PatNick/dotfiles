@@ -60,8 +60,8 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap . :norm.<CR>
 
-nnoremap ]c :cnext<CR>zz
-nnoremap [c :cprev<CR>zz
+nnoremap <C-j> :cnext<CR>zz
+nnoremap <C-k> :cprev<CR>zz
 
 nnoremap <leader>pv :Ex<CR>
 nnoremap <leader>x :silent !chmod +x %<CR>
