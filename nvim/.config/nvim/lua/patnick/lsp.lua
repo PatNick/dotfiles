@@ -7,7 +7,7 @@ local lspconfig = require('lspconfig')
 local opts = { noremap=true, silent=true }
 local my_attach = function(client, buffer)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
-    vim.keymap.set('n', '<leader>vd', vim.lsp.buf.definition, {buffer=0})
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer=0})
     vim.keymap.set('n', '<leader>vi', vim.lsp.buf.implementation, {buffer=0})
     vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, {buffer=0})
     vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, {buffer=0})
