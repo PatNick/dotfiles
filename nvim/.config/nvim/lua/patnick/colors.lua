@@ -1,4 +1,19 @@
-vim.cmd[[colorscheme tokyonight-night]]
+vim.g.gruvbox_contrast_dark = "hard"
+vim.g.catppuccin_flavour = "mocha"
+
+require("tokyonight").setup({
+    style = "night",
+    styles = {
+        functions = { bold = true },
+        sidebars = "dark",
+        floats = "dark",
+    },
+    sidebars = { "qf", "help", "fugitive" },
+    hide_inactive_statusline = true,
+    lualine_bold = true,
+})
+
+vim.cmd[[colorscheme tokyonight]]
 
 local config = require("tokyonight.config")
 local colors = require("tokyonight.colors").setup(config)
@@ -18,12 +33,3 @@ hl("LineNrAbove", {
 hl("LineNrBelow", {
     fg = colors.comment,
 })
-
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_hide_inactive_statusline = true
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-vim.g.tokyonight_lualine_bold = true
-
-vim.g.gruvbox_contrast_dark = "hard"
-
-vim.g.catppuccin_flavour = "mocha"
