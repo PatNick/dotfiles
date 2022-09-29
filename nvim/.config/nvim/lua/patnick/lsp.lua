@@ -19,7 +19,16 @@ local my_attach = function(client, buffer)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {buffer=0})
 end
 
-local servers = { 'tsserver', 'clangd', 'pyright', 'gopls', 'bashls', 'ansiblels' }
+local servers = {
+    'clangd',
+    'pyright',
+    'gopls',
+    'bashls',
+    'ansiblels',
+    'tsserver',
+    'html',
+    'cssls',
+}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = my_attach,
@@ -64,6 +73,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'nvim_lua' },
+        { name = 'cmp_tabnine' },
         { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
     },
@@ -78,6 +88,7 @@ cmp.setup {
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
+                cmp_tabnine = "[TN]",
                 path = "[path]",
                 luasnip = "[snip]",
                 nvim_lua = "[API]",
@@ -88,4 +99,15 @@ cmp.setup {
         ghost_text = true,
     }
 }
+
+local tabnine = require('cmp_tabnine.config')
+
+tabnine.setup({
+	max_lines = 1000,
+	max_num_results = 20,
+	sort = true,
+	run_on_every_keystroke = true,
+	snippet_placeholder = '..',
+	show_prediction_strength = false
+})
 
