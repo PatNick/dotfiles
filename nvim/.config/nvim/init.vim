@@ -41,6 +41,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'mfussenegger/nvim-dap-python'
 
 call plug#end()
 

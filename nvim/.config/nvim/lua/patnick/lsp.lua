@@ -88,7 +88,7 @@ cmp.setup {
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
-                cmp_tabnine = "[TN]",
+                cmp_tabnine = "[T9]",
                 path = "[path]",
                 luasnip = "[snip]",
                 nvim_lua = "[API]",

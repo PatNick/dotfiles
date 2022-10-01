@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input(
 
 require('dap-go').setup()
 require('dapui').setup()
+require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
