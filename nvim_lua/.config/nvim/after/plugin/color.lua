@@ -2,7 +2,7 @@ vim.g.catppuccin_flavour = "mocha"
 
 require("gruvbox").setup({
     transparent_mode = true,
-    inverse = true,
+    invert_selection = true,
     contrast = "hard",
 })
 
@@ -23,6 +23,7 @@ require("tokyonight").setup({
     style = "night",
     styles = {
         functions = { bold = true },
+        comments = { bold = true },
         sidebars = "dark",
         floats = "dark",
     },
