@@ -10,7 +10,8 @@ require("tokyonight").setup({
     },
     sidebars = { "qf", "help", "fugitive", "gitcommit" },
     hide_inactive_statusline = true,
-    dim_inactive = true,
+    transparent = true,
+    --[[ dim_inactive = true, ]]
     lualine_bold = true,
 })
 
