@@ -76,8 +76,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-nnoremap n nzzzv
-nnoremap N Nzzzv
 nnoremap J mzJ`z
 
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count :"") . 'k'
@@ -97,7 +95,7 @@ endfun
 
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 50})
 augroup END
 
 augroup mygroup
