@@ -1,5 +1,23 @@
-vim.g.gruvbox_contrast_dark = "hard"
 vim.g.catppuccin_flavour = "mocha"
+
+require("gruvbox").setup({
+    transparent_mode = true,
+    inverse = true,
+    contrast = "hard",
+})
+
+require("catppuccin").setup({
+    transparent_background = true,
+    styles = {
+        comments = { "italic" },
+        functions = { "italic" },
+    },
+    integrations = {
+        cmp = true,
+        telescope = true,
+        treesitter = true,
+    },
+})
 
 require("tokyonight").setup({
     style = "night",
@@ -11,7 +29,6 @@ require("tokyonight").setup({
     sidebars = { "qf", "help", "fugitive", "gitcommit" },
     hide_inactive_statusline = true,
     transparent = true,
-    --[[ dim_inactive = true, ]]
     lualine_bold = true,
 })
 

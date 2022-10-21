@@ -20,3 +20,7 @@ end)
 nnoremap("<leader>gc", function()
     require('telescope.builtin').git_branches()
 end)
+
+nnoremap("<leader>vrc", function()
+    require('nuttywombat.telescope').search_dotfiles()
+end)

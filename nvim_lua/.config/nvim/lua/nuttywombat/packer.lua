@@ -9,7 +9,12 @@ return require('packer').startup(function(use)
 
     use 'folke/tokyonight.nvim'
 
-    use 'gruvbox-community/gruvbox'
+    use 'ellisonleao/gruvbox.nvim'
+
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+    }
 
     use 'tpope/vim-fugitive'
 
@@ -33,6 +38,12 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lua'
+
+    use {
+        'tzachar/cmp-tabnine',
+        run = './install.sh',
+        requires = 'hrsh7th/nvim-cmp'
+    }
 
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'

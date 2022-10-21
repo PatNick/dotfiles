@@ -73,6 +73,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'nvim_lua' },
+        { name = 'cmp_tabnine' },
         { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
     },
@@ -87,6 +88,7 @@ cmp.setup {
             menu = {
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
+                cmp_tabnine = "[T9]",
                 path = "[path]",
                 luasnip = "[snip]",
                 nvim_lua = "[API]",
