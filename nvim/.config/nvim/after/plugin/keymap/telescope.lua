@@ -17,6 +17,10 @@ nnoremap("<leader>pb", function()
     require('telescope.builtin').buffers()
 end)
 
+nnoremap("<leader>vh", function()
+    require('telescope.builtin').help_tags()
+end)
+
 nnoremap("<leader>gc", function()
     require('telescope.builtin').git_branches()
 end)
