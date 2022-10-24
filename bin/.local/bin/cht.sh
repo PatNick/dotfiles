@@ -6,7 +6,7 @@ selected=$(echo -e "$languages\n$core_utils" | fzf)
 
 read -p "query: " query
 
-if echo "$languages" | grep -qs $selected; then
+if echo "$languages" | grep -qs "$selected"; then
     bash -c "curl cht.sh/$selected/$(echo "$query" | tr " " "+") | less "
 else
     bash -c "curl cht.sh/$selected~$query | less"
