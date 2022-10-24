@@ -45,6 +45,11 @@ return require('packer').startup(function(use)
         requires = 'hrsh7th/nvim-cmp'
     }
 
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
+    use 'rcarriga/nvim-dap-ui'
+    use 'mfussenegger/nvim-dap-python'
+
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
 
