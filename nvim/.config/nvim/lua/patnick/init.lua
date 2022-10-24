@@ -1,6 +1,0 @@
-require("patnick.telescope")
-require("patnick.lsp")
-require("patnick.treesitter")
-require("patnick.colors")
-require("patnick.line")
-require("patnick.debugging")
