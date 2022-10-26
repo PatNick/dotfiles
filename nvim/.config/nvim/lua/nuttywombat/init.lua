@@ -20,7 +20,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd('BufWritePre', {
-    group = NuttyWchemyGroup,
+    group = NuttyWombatGroup,
     pattern = '*',
     command = '%s/\\s\\+$//e',
 })
