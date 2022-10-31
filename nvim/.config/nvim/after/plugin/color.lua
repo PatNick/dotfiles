@@ -22,7 +22,7 @@ require("catppuccin").setup({
 require("tokyonight").setup({
     style = "night",
     styles = {
-        functions = { italic = true },
+        keywords = { italic = true },
         comments = { italic = true },
         sidebars = "dark",
         floats = "dark",
