@@ -1,4 +1,4 @@
-local Remap = require('nuttywombat.keymap')
+local Remap = require('pn.keymap')
 local nnoremap = Remap.nnoremap
 
 nnoremap("<C-p>", function()
@@ -26,5 +26,5 @@ nnoremap("<leader>gc", function()
 end)
 
 nnoremap("<leader>vrc", function()
-    require('nuttywombat.telescope').search_dotfiles()
+    require('pn.telescope').search_dotfiles()
 end)

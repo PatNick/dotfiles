@@ -1,4 +1,4 @@
-local Remap = require("nuttywombat.keymap")
+local Remap = require("pn.keymap")
 local nnoremap = Remap.nnoremap
 local nmap = Remap.nmap
 

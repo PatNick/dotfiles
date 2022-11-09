@@ -1,6 +1,6 @@
-require('nuttywombat.packer')
-require('nuttywombat.set')
-require('nuttywombat.telescope')
+require('pn.packer')
+require('pn.set')
+require('pn.telescope')
 
 local augroup = vim.api.nvim_create_augroup
 NuttyWombatGroup = augroup('NuttyWombat', {})
