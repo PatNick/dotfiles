@@ -23,3 +23,5 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 nnoremap("<leader>ee", "oif err != nil {<CR>return nil, err<CR>}<CR><esc>kkI<esc>")
+
+nnoremap("<leader>u", ":UndotreeShow<CR>")

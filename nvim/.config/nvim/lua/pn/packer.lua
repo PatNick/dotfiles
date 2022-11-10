@@ -52,6 +52,8 @@ return require('packer').startup(function(use)
 
     use 'preservim/nerdcommenter'
 
+    use 'mbbill/undotree'
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ":TSUpdate"
