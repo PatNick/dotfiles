@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
+    use 'mfussenegger/nvim-jdtls'
 
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
