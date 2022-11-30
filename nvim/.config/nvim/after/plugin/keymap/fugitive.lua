@@ -1,7 +1,3 @@
-local Remap = require("pn.keymap")
-local nnoremap = Remap.nnoremap
-local nmap = Remap.nmap
-
-nnoremap("<leader>gs", ":G<CR>")
-nmap("<leader>gj", ":diffget //3<CR>")
-nmap("<leader>gf", ":diffget //2<CR>")
+vim.keymap.set('n', "<leader>gs", ":G<CR>")
+vim.keymap.set('n', "<leader>gj", ":diffget //3<CR>")
+vim.keymap.set('n', "<leader>gf", ":diffget //2<CR>")
