@@ -5,7 +5,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
 local opts = { noremap=true, silent=true }
-local my_config = require('nuttywombat.lsp_attach')
+local my_config = require('pn.lsp_attach')
 
 local servers = {
     'clangd',
