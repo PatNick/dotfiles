@@ -19,11 +19,16 @@ require("catppuccin").setup({
     },
 })
 
+-- comment
+
 require("tokyonight").setup({
     style = "night",
     styles = {
-        keywords = { italic = true },
         comments = { italic = true },
+        keywords = { italic = true },
+        functions = {},
+        variables = {},
+        types = {},
         sidebars = "dark",
         floats = "dark",
     },
