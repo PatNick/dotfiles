@@ -3,11 +3,11 @@ vim.keymap.set("n", "<C-p>", function()
 end)
 
 vim.keymap.set("n", "<leader>ps", function()
-    require('telescope.builtin').live_grep({hidden = true})
+    require('telescope.builtin').live_grep()
 end)
 
 vim.keymap.set("n", "<leader>pf", function()
-    require('telescope.builtin').find_files({hidden = true})
+    require('telescope.builtin').find_files()
 end)
 
 vim.keymap.set("n", "<leader>pb", function()
