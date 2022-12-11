@@ -16,6 +16,7 @@ local servers = {
     'tsserver',
     'html',
     'cssls',
+    'sumneko_lua',
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

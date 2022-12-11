@@ -126,6 +126,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git"
 
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/sumneko/bin
 
 autoload -Uz compinit
 compinit
@@ -164,3 +165,5 @@ bindkey -s  "tmux-sessionizer\n"
 export PATH="$HOME/.poetry/bin:$PATH"
 export GOBIN="$HOME/go/bin"
 export PATH="$GOBIN:$PATH"
+
+alias luamake=/home/pat/sumneko/3rd/luamake/luamake
