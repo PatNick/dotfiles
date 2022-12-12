@@ -1,4 +1,4 @@
-require('refactoring').setup({
+require("refactoring").setup({
 
     prompt_func_return_type = {
         go = true,

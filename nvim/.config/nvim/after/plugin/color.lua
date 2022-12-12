@@ -59,10 +59,10 @@ hl("LineNrBelow", {
     fg = colors.comment,
 })
 
-require('lualine').setup {
+require("lualine").setup {
     options = {
         theme = "tokyonight",
-        section_separators = '',
-        component_separators = ''
+        section_separators = "",
+        component_separators = ""
     }
 }
