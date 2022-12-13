@@ -165,5 +165,6 @@ bindkey -s  "tmux-sessionizer\n"
 export PATH="$HOME/.poetry/bin:$PATH"
 export GOBIN="$HOME/go/bin"
 export PATH="$GOBIN:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
 
 alias luamake=/home/pat/sumneko/3rd/luamake/luamake
