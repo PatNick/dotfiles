@@ -162,8 +162,9 @@ add-zsh-hook chpwd chpwd_recent_dirs
 
 bindkey -s  "tmux-sessionizer\n"
 
-export PATH="$HOME/.poetry/bin:$PATH"
 export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/go:/usr/share/gocode"
+export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
