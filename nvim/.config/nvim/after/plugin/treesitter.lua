@@ -9,6 +9,7 @@ configs.setup {
         "go", "python", "java",
         "bash", "json", "lua",
         "vim", "rust", "html", "css",
+        "help",
     },
     sync_install = false,
     ignore_install = { "" },
