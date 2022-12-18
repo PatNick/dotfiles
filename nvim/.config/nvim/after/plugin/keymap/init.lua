@@ -21,3 +21,5 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>return nil, err<CR>}<CR><
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
+
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
