@@ -27,15 +27,25 @@ return require("packer").startup(function(use)
     use "nvim-lualine/lualine.nvim"
     use "kyazdani42/nvim-web-devicons"
 
-    use "neovim/nvim-lspconfig"
     use "onsails/lspkind-nvim"
     use "mfussenegger/nvim-jdtls"
 
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-nvim-lsp"
-    use "hrsh7th/cmp-nvim-lua"
+    use {
+        "VonHeikemen/lsp-zero.nvim",
+        requires = {
+            {"neovim/nvim-lspconfig"},
+            {"williamboman/mason.nvim"},
+            {"williamboman/mason-lspconfig.nvim"},
+
+            {"hrsh7th/nvim-cmp"},
+            {"hrsh7th/cmp-buffer"},
+            {"hrsh7th/cmp-path"},
+            {"hrsh7th/cmp-nvim-lsp"},
+            {"hrsh7th/cmp-nvim-lua"},
+            {"saadparwaiz1/cmp_luasnip"},
+        }
+    }
+
 
     use {
         "tzachar/cmp-tabnine",
@@ -48,8 +58,8 @@ return require("packer").startup(function(use)
     use "rcarriga/nvim-dap-ui"
     use "mfussenegger/nvim-dap-python"
 
-    use "saadparwaiz1/cmp_luasnip"
     use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
 
     use "preservim/nerdcommenter"
 
