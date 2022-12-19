@@ -32,8 +32,10 @@ lsp.configure("sumneko_lua", {
     }
 })
 
+vim.opt.completeopt = {"menu", "menuone", "noselect", "noinsert"}
+
 local cmp = require("cmp")
-local cmp_mappings = lsp.defaults.cmp_mappings({
+local cmp_mappings = cmp.mapping.preset.insert({
     ["<C-p>"] = cmp.mapping.select_prev_item(),
     ["<C-n>"] = cmp.mapping.select_next_item(),
     ["<C-u>"] = cmp.mapping.scroll_docs(-4),
@@ -43,7 +45,15 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-y"] = cmp.mapping.confirm({ select = true }),
 })
 
+cmp_mappings["<Tab>"] = nil
+cmp_mappings["<S-Tab>"] = nil
+cmp_mappings["<CR>"] = nil
+
 lsp.setup_nvim_cmp({
+    preselect = "none",
+    completion = {
+        completeopt = 'menu,menuone,noselect,noinsert'
+    },
     mapping = cmp_mappings,
     sources = {
         { name = "nvim_lsp" },
