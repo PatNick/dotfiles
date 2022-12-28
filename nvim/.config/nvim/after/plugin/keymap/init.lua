@@ -21,3 +21,11 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>return nil, err<CR>}<CR><
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("n", "<leader>x", "<cmd>silent !chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "<expr>j", function()
+end)
+
+vim.api.nvim_exec([[
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : '') . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : '') . 'j'
+]], true)
