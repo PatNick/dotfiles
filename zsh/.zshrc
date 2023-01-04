@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias docker="podman"
+alias mutt="neomutt"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
