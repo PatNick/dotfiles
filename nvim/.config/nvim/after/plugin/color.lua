@@ -19,8 +19,6 @@ require("catppuccin").setup({
     },
 })
 
--- comment
-
 require("tokyonight").setup({
     style = "night",
     styles = {
