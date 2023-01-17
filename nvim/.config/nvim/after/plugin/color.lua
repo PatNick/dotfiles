@@ -50,11 +50,11 @@ hl("LineNr", {
 })
 
 hl("LineNrAbove", {
-    fg = colors.fg,
+    fg = colors.comment,
 })
 
 hl("LineNrBelow", {
-    fg = colors.fg,
+    fg = colors.comment,
 })
 
 require("lualine").setup {
