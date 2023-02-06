@@ -15,8 +15,6 @@ lsp.set_preferences({
 lsp.ensure_installed({
     "gopls",
     "clangd",
-    "html",
-    "cssls",
     "pyright",
     "rust_analyzer",
     "sumneko_lua",
