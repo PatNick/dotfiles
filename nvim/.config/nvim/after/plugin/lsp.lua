@@ -17,7 +17,6 @@ lsp.ensure_installed({
     "clangd",
     "pyright",
     "rust_analyzer",
-    "sumneko_lua",
 })
 
 lsp.configure("sumneko_lua", {
