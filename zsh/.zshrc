@@ -166,7 +166,7 @@ bindkey -s  "tmux-sessionizer\n"
 
 export GOBIN="$HOME/go/bin"
 export GOPATH="$HOME/go:/usr/share/gocode"
-export PATH="$PATH:/usr/local/go"
+export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
