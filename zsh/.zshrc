@@ -164,11 +164,11 @@ add-zsh-hook chpwd chpwd_recent_dirs
 
 bindkey -s  "tmux-sessionizer\n"
 
-export GOBIN="$HOME/go/bin"
 export GOPATH="$HOME/go:/usr/share/gocode"
+export GOBIN="$HOME/go/bin"
+export PATH="$GOBIN:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 alias luamake=/home/pat/sumneko/3rd/luamake/luamake
