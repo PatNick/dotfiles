@@ -1,6 +1,6 @@
 local opts = {
     nu = true,
-    relativenumber = true,
+    rnu = true,
     errorbells = false,
     mouse = "",
     splitbelow = true,
