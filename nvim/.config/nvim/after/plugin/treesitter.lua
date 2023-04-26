@@ -8,7 +8,7 @@ configs.setup {
         "c", "cpp",
         "go", "python", "java",
         "bash", "json", "lua",
-        "vim", "rust", "help",
+        "vim", "rust",
     },
     sync_install = false,
     ignore_install = { "" },
