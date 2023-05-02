@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/pat/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
-  nvim = {
-    loaded = true,
-    path = "/home/pat/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/pat/.local/share/nvim/site/pack/packer/start/nvim-cmp",
