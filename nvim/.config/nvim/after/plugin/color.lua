@@ -1,24 +1,3 @@
-vim.g.catppuccin_flavour = "mocha"
-
-require("gruvbox").setup({
-    transparent_mode = true,
-    invert_selection = true,
-    contrast = "hard",
-})
-
-require("catppuccin").setup({
-    transparent_background = true,
-    styles = {
-        comments = { "italic" },
-        functions = { "italic" },
-    },
-    integrations = {
-        cmp = true,
-        telescope = true,
-        treesitter = true,
-    },
-})
-
 require("tokyonight").setup({
     style = "night",
     styles = {
