@@ -1,5 +1,4 @@
 require("pn.set")
-require("pn.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 NuttyWombatGroup = augroup("NuttyWombat", {})
