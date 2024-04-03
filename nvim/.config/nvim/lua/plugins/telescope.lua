@@ -54,7 +54,7 @@ return {
 
             return {
                 defaults = {
-                    vimgrep_arguments = vim_arguments,
+                    vimgrep_arguments = vimgrep_arguments,
 
                     prompt_prefix = " >",
                     color_devicons = true,

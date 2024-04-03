@@ -62,7 +62,10 @@ return {
                             Lua = {
                                 diagnostics = {
                                     globals = { "vim" },
-                                }
+                                },
+                                workspace = {
+                                    preloadFileSize = 1000
+                                },
                             }
                         }
                     }
