@@ -171,3 +171,6 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 alias luamake=/home/pat/sumneko/3rd/luamake/luamake
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/pat/.pulumi/bin
