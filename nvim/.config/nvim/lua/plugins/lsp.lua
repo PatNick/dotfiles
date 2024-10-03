@@ -28,7 +28,6 @@ return {
                     map("n", "<leader>vd", "<cmd>lua vim.diagnostic.open_float()<cr>")
                     map("n", "<leader>vrn", "<cmd>lua vim.lsp.buf.rename()<cr>")
                     map("n", "<leader>vca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
-                    map("n", "<leader>ff", "<cmd>lua function(()<cr>")
                     map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
                     map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>")
                 end,
