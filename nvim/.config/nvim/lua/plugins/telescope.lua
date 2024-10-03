@@ -26,6 +26,11 @@ return {
                 desc = "Live Grep",
             },
             {
+                "<leader>vs",
+                "<cmd>Telescope grep_string<cr>",
+                desc = "Search Under Cursor",
+            },
+            {
                 "<leader>pb",
                 "<cmd>Telescope buffers<cr>",
                 desc = "Search Buffers",
@@ -43,7 +48,7 @@ return {
         },
         opts = function()
             local previewers = require("telescope.previewers")
-            local sorters = require("telescope.sorters")
+            --local sorters = require("telescope.sorters")
             local actions = require("telescope.actions")
             local telescopeConfig = require("telescope.config")
             local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
