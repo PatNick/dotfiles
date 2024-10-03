@@ -1,5 +1,6 @@
 find
 man
+dnf
 tldr
 sed
 awk
