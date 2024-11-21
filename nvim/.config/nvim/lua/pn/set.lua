@@ -1,4 +1,6 @@
-local opts = {
+local M = {}
+
+M.opts = {
     nu = true,
     rnu = true,
     errorbells = false,
@@ -24,11 +26,7 @@ local opts = {
     colorcolumn = "80"
 }
 
-for k, v in pairs(opts) do
-    vim.opt[k] = v
-end
-
-local globs = {
+M.globs = {
     mapleader = " ",
     netrw_browse_split = 0,
     netrw_banner = 0,
@@ -39,7 +37,4 @@ local globs = {
     loaded_perl_provider = 0,
 }
 
-for k, v in pairs(globs) do
-    vim.g[k] = v
-end
-
+return M
