@@ -1,7 +1,7 @@
 local sets = require("pn.set")
 
 for k, v in pairs(sets.opts) do
-    vim.g[k] = v
+    vim.opt[k] = v
 end
 
 for k, v in pairs(sets.globs) do
