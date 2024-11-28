@@ -1,7 +1,6 @@
 return {
     {
         "folke/tokyonight.nvim",
-        lazy = true,
         opts = {
             transparent = true,
             style = "night",
@@ -17,6 +16,11 @@ return {
             sidebars = { "qf", "help", "fugitive", "gitcommit" },
             lualine_bold = true,
         },
+        config = function(_, opts)
+            local tn = require("tokyonight")
+            tn.setup(opts)
+            vim.cmd([[colorscheme tokyonight]])
+        end,
     }
 }
 
