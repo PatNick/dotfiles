@@ -61,7 +61,7 @@ return {
                 defaults = {
                     vimgrep_arguments = vimgrep_arguments,
 
-                    prompt_prefix = " >",
+                    prompt_prefix = "> ",
                     color_devicons = true,
 
                     file_previewer = previewers.vim_buffer_cat.new,
