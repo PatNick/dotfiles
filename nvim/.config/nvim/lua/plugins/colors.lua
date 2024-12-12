@@ -19,8 +19,7 @@ return {
             lualine_bold = true,
         },
         config = function(_, opts)
-            local tn = require("tokyonight")
-            tn.setup(opts)
+            require("tokyonight").setup(opts)
             vim.cmd([[colorscheme tokyonight]])
         end,
     }
