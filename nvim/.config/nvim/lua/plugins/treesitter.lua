@@ -3,6 +3,9 @@ return {
         "nvim-treesitter/nvim-treesitter",
         version = false,
         build = ":TSUpdate",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter-context"
+        },
         opts = {
             highlight = { enable = true },
             indent = { enable = true },
