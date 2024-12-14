@@ -17,11 +17,30 @@ return {
             },
             sidebars = { "qf", "help", "fugitive", "gitcommit" },
             lualine_bold = true,
+            on_colors = function(colors)
+                colors.hint = colors.orange
+                colors.error = "#ff0000"
+            end,
+            on_highlights = function(hl, c)
+                local util = require("tokyonight.util")
+                hl.LineNr = {
+                    fg = c.fg_sidebar
+                }
+                hl.LineNrAbove = {
+                    fg = util.darken(c.fg_sidebar, 0.4)
+                }
+                hl.LineNrBelow = {
+                    fg = util.darken(c.fg_sidebar, 0.3)
+                }
+                end,
+                },
+                config = function(_, opts)
+                require("tokyonight").setup(opts)
+                vim.cmd([[colorscheme tokyonight]])
+            end,
         },
-        config = function(_, opts)
-            require("tokyonight").setup(opts)
-            vim.cmd([[colorscheme tokyonight]])
-        end,
+        {
+            "gruvbox-community/gruvbox",
+        },
     }
-}
 
