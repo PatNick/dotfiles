@@ -30,17 +30,17 @@ return {
                     fg = util.darken(c.fg_sidebar, 0.4)
                 }
                 hl.LineNrBelow = {
-                    fg = util.darken(c.fg_sidebar, 0.3)
+                    fg = util.darken(c.fg_sidebar, 0.4)
                 }
-                end,
-                },
-                config = function(_, opts)
-                require("tokyonight").setup(opts)
-                vim.cmd([[colorscheme tokyonight]])
             end,
         },
-        {
-            "gruvbox-community/gruvbox",
-        },
-    }
+        config = function(_, opts)
+            require("tokyonight").setup(opts)
+            vim.cmd([[colorscheme tokyonight]])
+        end,
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+    },
+}
 
