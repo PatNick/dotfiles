@@ -34,14 +34,13 @@ return {
                 }
             end,
         },
---        config = function(_, opts)
---            require("tokyonight").setup(opts)
---            vim.cmd([[colorscheme tokyonight]])
---        end,
     },
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
+        opts = {
+            contrast = "hard",
+        },
         config = function(_, opts)
             require("gruvbox").setup(opts)
             vim.cmd([[colorscheme gruvbox]])
