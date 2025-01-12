@@ -127,6 +127,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git"
 
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/scripts
 
 
 autoload -Uz compinit
