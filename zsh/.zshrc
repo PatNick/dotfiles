@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,9 +73,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(dnf
+    fzf
     git
     tmux
-    fzf
+    vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -133,7 +134,7 @@ autoload -Uz compinit
 compinit
 
 bindkey -v
-source /usr/share/fzf/shell/key-bindings.zsh
+#source /usr/share/fzf/shell/key-bindings.zsh
 source ~/completion.zsh
 
 alias -g Z='| fzf'
