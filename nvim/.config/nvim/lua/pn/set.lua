@@ -1,5 +1,13 @@
 local M = {}
 
+local statusline = {
+    '%t ',
+    '%h %m %r',
+    '%Y%=%{v:register}',
+    '%-14.(%l,%c%V%)',
+    '%P',
+}
+
 M.opts = {
     nu = true,
     rnu = true,
@@ -23,6 +31,8 @@ M.opts = {
     signcolumn = "yes",
     cmdheight = 1,
     updatetime = 50,
+    laststatus = 3,
+    statusline = table.concat(statusline, ''),
     colorcolumn = "80"
 }
 
