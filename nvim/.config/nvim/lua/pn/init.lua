@@ -8,7 +8,6 @@ for k, v in pairs(sets.globs) do
     vim.g[k] = v
 end
 
-
 local augroup = vim.api.nvim_create_augroup
 NuttyWombatGroup = augroup("NuttyWombat", {})
 
