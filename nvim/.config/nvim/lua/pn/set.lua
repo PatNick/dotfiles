@@ -1,13 +1,5 @@
 local M = {}
 
-local statusline = {
-    '%t ',
-    '%h %m %r',
-    '%Y%=%{v:register}',
-    '%-14.(%l,%c%V%)',
-    '%P',
-}
-
 M.opts = {
     nu = true,
     rnu = true,
@@ -32,7 +24,7 @@ M.opts = {
     cmdheight = 1,
     updatetime = 50,
     laststatus = 3,
-    statusline = table.concat(statusline, ''),
+    statusline = require("pn.status").line(),
     colorcolumn = "80"
 }
 
