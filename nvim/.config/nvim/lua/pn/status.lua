@@ -1,6 +1,5 @@
 local M = { }
 
-
 M.line = function()
     local function git_branch()
         local branch = vim.fn.system("git rev-parse --abbrev-ref @ 2>/dev/null | tr -d '\n'")
