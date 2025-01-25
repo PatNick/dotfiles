@@ -170,6 +170,8 @@ export PATH="$GOBIN:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
+export MANPAGER="nvim +Man!"
+
 
 alias luamake=/home/pat/sumneko/3rd/luamake/luamake
 
