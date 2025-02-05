@@ -75,10 +75,8 @@ ZSH_THEME="simple"
 plugins=(dnf
     fzf
     git
-    tmux
     vi-mode
     zsh-autosuggestions
-    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,7 +109,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias docker="podman"
-alias mutt="neomutt"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -129,9 +126,33 @@ export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git"
 
 export PATH=$PATH:$HOME/.local/bin
 
+setopt hist_ignore_dups
+setopt hist_ignore_space
 
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' completer _expand _complete _ignore _approximate
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+
+run_under_tmux() {
+    command -v tmux >/dev/null 2>&1 || return 1
+
+    if [ -z "$1" ]; then return 1; fi
+    local window_name="$1"
+    if [ -n "$2" ]; then
+        local execute="$2"
+    else
+        local execute="command ${window_name}"
+    fi
+
+    tmux neww -Sn "${window_name}" "${execute}"
+}
+
+mutt() { run_under_tmux 'neomutt'; }
+aerc() { run_under_tmux 'aerc'; }
+irc() { run_under_tmux irssi "TERM='screen' command irssi" }
 
 bindkey -v
 #source /usr/share/fzf/shell/key-bindings.zsh
@@ -177,3 +198,8 @@ alias luamake=/home/pat/sumneko/3rd/luamake/luamake
 
 # add Pulumi to the PATH
 export PATH=$PATH:/home/pat/.pulumi/bin
+export BWS_ACCESS_TOKEN=0.6dea9f03-673a-4407-9ec7-b2380122e2e7.zonoH7XvgqLRMUT6vK8C2fivTWYQ76:d52FSO1CqfO3aF22S3/acg==
+
+change_bg() {
+    feh --bg-fill ~/Pictures/wallpapers/$(ls ~/Pictures/wallpapers/ | fzf)
+}

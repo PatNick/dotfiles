@@ -39,7 +39,7 @@ return {
                     end,
                 },
                 completion = {
-                    completeopt = "menu", "menuone", "noselect", "noinsert",
+                    completeopt = "menu", "select", "insert",
                 },
                 experimental = {
                     ghost_text = {
