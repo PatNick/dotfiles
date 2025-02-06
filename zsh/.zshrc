@@ -155,7 +155,7 @@ aerc() { run_under_tmux 'aerc'; }
 irc() { run_under_tmux irssi "TERM='screen' command irssi" }
 
 bindkey -v
-#source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
 source ~/completion.zsh
 
 alias -g Z='| fzf'
