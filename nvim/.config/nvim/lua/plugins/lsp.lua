@@ -9,6 +9,7 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
+            "mfussenegger/nvim-jdtls",
         },
         config = function()
             vim.api.nvim_create_autocmd('LspAttach', {
