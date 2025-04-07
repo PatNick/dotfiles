@@ -1,6 +1,7 @@
 local M = {}
 
 M.opts = {
+    guicursor = "",
     nu = true,
     rnu = true,
     errorbells = false,
