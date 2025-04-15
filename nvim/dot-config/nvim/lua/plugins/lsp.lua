@@ -71,6 +71,7 @@ return {
                     }
                 end,
             }
+            vim.lsp.set_log_level("ERROR")
         end,
     },
     {
