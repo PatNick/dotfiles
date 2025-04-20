@@ -41,11 +41,6 @@ return {
                 completion = {
                     completeopt = "menu", "select", "insert",
                 },
-                experimental = {
-                    ghost_text = {
-                        hl_group = "CmpGhostText",
-                    },
-                },
             }
         end,
     },
