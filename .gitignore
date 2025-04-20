@@ -4,5 +4,4 @@ bin/.local/bin/ia
 bin/.local/bin/rust-analyzer
 pytest
 py.test
-lazy-lock.json
 bws
