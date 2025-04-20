@@ -2,7 +2,6 @@ local ensure_installed = {
     "lua_ls",
     "gopls",
 }
-
 return {
     {
         "neovim/nvim-lspconfig",
@@ -21,25 +20,23 @@ return {
                         vim.keymap.set(m, lhs, rhs, opts)
                     end
                     vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-                    map("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>")
-                    map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
-                    map("n", "<leader>vi", "<cmd>lua vim.lsp.buf.implementation()<cr>")
-                    map("i", "<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<cr>")
-                    map("n", "<leader>vrr", "<cmd>lua vim.lsp.buf.references()<cr>")
-                    map("n", "<leader>vd", "<cmd>lua vim.diagnostic.open_float()<cr>")
-                    map("n", "<leader>vrn", "<cmd>lua vim.lsp.buf.rename()<cr>")
-                    map("n", "<leader>vca", "<cmd>lua vim.lsp.buf.code_action()<cr>")
-                    map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>")
-                    map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>")
+                    map("n", "K",           vim.lsp.buf.hover)
+                    map("n", "gd",          vim.lsp.buf.definition)
+                    map("n", "<leader>vi",  vim.lsp.buf.implementation)
+                    map("i", "<C-h>",       vim.lsp.buf.signature_help)
+                    map("n", "<leader>vrr", vim.lsp.buf.references)
+                    map("n", "<leader>vd",  vim.diagnostic.open_float)
+                    map("n", "<leader>vrn", vim.lsp.buf.rename)
+                    map("n", "<leader>vca", vim.lsp.buf.code_action)
+                    map("n", "[d",          vim.diagnostic.goto_prev)
+                    map("n", "]d",          vim.diagnostic.goto_next)
                 end,
             })
         end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = ensure_installed,
-        },
+        opts = { ensure_installed = ensure_installed, },
         config = function()
             require("mason-lspconfig").setup()
 
@@ -60,12 +57,8 @@ return {
                     lspconfig.lua_ls.setup {
                         settings = {
                             Lua = {
-                                diagnostics = {
-                                    globals = { "vim" },
-                                },
-                                workspace = {
-                                    preloadFileSize = 1000
-                                },
+                                diagnostics = { globals = { "vim" }, },
+                                workspace = { preloadFileSize = 1000 },
                             }
                         }
                     }

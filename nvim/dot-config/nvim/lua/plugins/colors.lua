@@ -23,24 +23,16 @@ return {
             end,
             on_highlights = function(hl, c)
                 local util = require("tokyonight.util")
-                hl.LineNr = {
-                    fg = c.fg_sidebar
-                }
-                hl.LineNrAbove = {
-                    fg = util.darken(c.fg_sidebar, 0.4)
-                }
-                hl.LineNrBelow = {
-                    fg = util.darken(c.fg_sidebar, 0.4)
-                }
+                hl.LineNr = { fg = c.fg_sidebar }
+                hl.LineNrAbove = { fg = util.darken(c.fg_sidebar, 0.4) }
+                hl.LineNrBelow = { fg = util.darken(c.fg_sidebar, 0.4) }
             end,
         },
     },
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
-        opts = {
-            contrast = "hard",
-        },
+        opts = { contrast = "hard", },
         config = function(_, opts)
             require("gruvbox").setup(opts)
             vim.cmd([[colorscheme gruvbox]])

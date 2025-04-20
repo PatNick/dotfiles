@@ -4,51 +4,22 @@ return {
         cmd = "Telescope",
         version = false,
         dependencies = {
+            { "nvim-lua/plenary.nvim", lazy = true },
             {
-                "nvim-lua/plenary.nvim",
-                lazy = true
+                "nvim-telescope/telescope-fzf-native.nvim",
+                build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release"
             },
         },
         keys = {
-            {
-                "<C-p>",
-                "<cmd>Telescope git_files<cr>",
-                desc = "Git Files",
-            },
-            {
-                "<leader>pf",
-                "<cmd>Telescope find_files<cr>",
-                desc = "Find Files",
-            },
-            {
-                "<leader>ps",
-                "<cmd>Telescope live_grep<cr>",
-                desc = "Live Grep",
-            },
-            {
-                "<leader>vs",
-                "<cmd>Telescope grep_string<cr>",
-                desc = "Search Under Cursor",
-            },
-            {
-                "<leader>pb",
-                "<cmd>Telescope buffers<cr>",
-                desc = "Search Buffers",
-            },
-            {
-                "<leader>vh",
-                "<cmd>Telescope help_tags<cr>",
-                desc = "Search Help",
-            },
-            {
-                "<leader>gc",
-                "<cmd>Telescope git_branches<cr>",
-                desc = "Git Checkout",
-            },
+            { "<C-p>",      require("telescope.builtin").git_files,    desc = "Git Files", },
+            { "<leader>pf", require("telescope.builtin").find_files,   desc = "Find Files", },
+            { "<leader>ps", require("telescope.builtin").live_grep,    desc = "Live Grep", },
+            { "<leader>vs", require("telescope.builtin").grep_string,  desc = "Search Under Cursor", },
+            { "<leader>pb", require("telescope.builtin").buffers,      desc = "Search Buffers", },
+            { "<leader>vh", require("telescope.builtin").help_tags,    desc = "Search Help", },
+            { "<leader>gc", require("telescope.builtin").git_branches, desc = "Git Checkout", },
         },
         opts = function()
-            local previewers = require("telescope.previewers")
-            --local sorters = require("telescope.sorters")
             local actions = require("telescope.actions")
             local telescopeConfig = require("telescope.config")
             local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
@@ -77,7 +48,13 @@ return {
                 },
                 pickers = {
                     find_files = {
-                        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+                        find_command = {
+                            "rg",
+                            "--files",
+                            "--hidden",
+                            "--glob",
+                            "!**/.git/*"
+                        },
                         no_ignore = true,
                     }
                 },
