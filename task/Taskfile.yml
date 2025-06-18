@@ -1,0 +1,31 @@
+version: '3'
+
+silent: true
+
+tasks:
+  default:
+    cmds:
+      - task: list
+
+  list:
+    desc: List available tasks
+    cmds:
+      - task --list
+
+  sys-info:
+    desc: Display system information
+    cmds:
+      - 'echo CPU architecture {{ARCH}}'
+      - 'echo Operating System {{OS}}'
+
+  init:
+    desc: Initialize go repository with basename of PWD
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - go mod init github.com/patnick/$(basename $(pwd))
+      - cp $HOME/tasks/go-tasks.yml '{{.USER_WORKING_DIR}}'/Taskfile.yml
+
+  secret:
+    desc: Inject bitwarden secrets manager into next command
+    cmds:
+      - bws run -- {{.CLI_ARGS}}
