@@ -1,13 +1,12 @@
 return {
     "hrsh7th/nvim-cmp",
     dependencies =  {
-        "neovim/nvim-lspconfig",
-        "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
-        "petertriho/cmp-git",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
         "L3MON4D3/LuaSnip",
+        "petertriho/cmp-git",
         "saadparwaiz1/cmp_luasnip",
     },
     opts = function()
@@ -43,5 +42,9 @@ return {
                 {name = "git"},
             }),
         }
+    end,
+    config = function (_, opts)
+        require("cmp").setup(opts)
+        require("cmp_git").setup()
     end,
 }
