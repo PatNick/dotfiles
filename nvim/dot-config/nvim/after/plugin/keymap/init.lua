@@ -25,6 +25,8 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("n", "<leader>x", "<cmd>silent !chmod +x %<CR>", { silent = true })
 
+vim.keymap.set("n", "<leader>q", "<cmd>lua vim.lsp.stop_client(vim.lsp.get_clients())<CR>")
+
 vim.api.nvim_exec([[
 nnoremap <expr> k (v:count > 4 ? "m'" . v:count : '') . 'k'
 nnoremap <expr> j (v:count > 4 ? "m'" . v:count : '') . 'j'
