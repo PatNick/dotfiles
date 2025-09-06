@@ -12,6 +12,9 @@ vim.lsp.config("*", {
 vim.lsp.config("clangd", {
     filetypes = { "c", "cpp" },
 })
+vim.lsp.config("pyright", {
+    filetypes = { "python" }
+})
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("my.lsp", {}),
     callback = function(args)
@@ -22,4 +25,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 vim.lsp.config("jdtls", { cmd = { "jdtls" } })
-vim.lsp.enable({"gopls","clangd","jdtls","lua_ls"})
+vim.lsp.enable({"gopls","clangd","jdtls","pyright","lua_ls"})
