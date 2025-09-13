@@ -1,8 +1,1 @@
-__pycache__/
-bin/.local/bin/exercism
-bin/.local/bin/ia
-bin/.local/bin/rust-analyzer
-pytest
-py.test
-bws
 configs.md
