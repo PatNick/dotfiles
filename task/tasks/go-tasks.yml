@@ -1,0 +1,62 @@
+version: '3'
+
+silent: true
+
+vars:
+  BIN_NAME: app
+  BIN_PATH: /tmp/bin
+  MAIN_PATH: ./
+
+tasks:
+  default:
+    cmds:
+      - task: list
+
+  list:
+    desc: List available tasks
+    cmds:
+      - task --list
+
+  audit:
+    desc: Tidy, Vet, Staticcheck and Vuln check
+    deps:
+      - test
+    cmds:
+      - go mod tidy -diff
+      - go mod verify
+      - test -z "$(shell gofmt -l .)"
+      - go vet ./...
+      - go run honnef.co/go/tools/cmd/staticcheck@latest -checks=all,-ST1000,-U1000 ./...
+      - go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+
+  test:
+    desc: Run test suite
+    cmds:
+      - go test -v -race -buildvcs ./...
+
+  tidy:
+    desc: Tidy .mod files and format .go files
+    cmds:
+      - go mod tidy -v
+      - go fmt ./...
+
+  build:
+    desc: Build the application
+    requires:
+      vars: [BIN_PATH, BIN_NAME, MAIN_PATH]
+    cmds:
+      - go build -o=${BIN_PATH}/${BIN_NAME} ${MAIN_PATH}
+
+  run:
+    desc: Run the application
+    deps:
+      - build
+    requires:
+      vars: [BIN_PATH, BIN_NAME]
+    cmds:
+      - ${BIN_PATH}/${BIN_NAME}
+
+  push:
+    desc: Push changes to remote git repository
+    cmds:
+      - git push
