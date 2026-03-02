@@ -1,10 +1,11 @@
 version: '3'
 
-silent: true
+silent: false
 
 vars:
   BIN_NAME: app
   BIN_PATH: /tmp/bin
+  TARGET: '{{.BIN_PATH}}/{{.BIN_NAME}}'
   MAIN_PATH: ./
 
 tasks:
@@ -15,19 +16,28 @@ tasks:
   list:
     desc: List available tasks
     cmds:
-      - task --list
+      - go-task --list
+
+  bootstrap:
+    desc: Install commonly used tools on go projects
+    cmds:
+      - echo "fetching govulncheck..."
+      - go get -tool golang.org/x/vuln/cmd/govulncheck
+      - echo "fetching staticchec..."
+      - go get -tool honnef.co/go/tools/cmd/staticcheck
 
   audit:
     desc: Tidy, Vet, Staticcheck and Vuln check
     deps:
+      - tidy
       - test
     cmds:
       - go mod tidy -diff
       - go mod verify
       - test -z "$(shell gofmt -l .)"
       - go vet ./...
-      - go run honnef.co/go/tools/cmd/staticcheck@latest -checks=all,-ST1000,-U1000 ./...
-      - go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+      - go tool staticcheck -checks=all,-ST1000,-U1000 ./...
+      - go tool govulncheck ./...
 
   test:
     desc: Run test suite
@@ -42,21 +52,32 @@ tasks:
 
   build:
     desc: Build the application
+    sources:
+      - ./main.go
+    generates:
+      - "{{.BIN_PATH}}/{{.BIN_NAME}}"
+    method: timestamp
     requires:
-      vars: [BIN_PATH, BIN_NAME, MAIN_PATH]
+      vars: [TARGET, MAIN_PATH]
     cmds:
-      - go build -o=${BIN_PATH}/${BIN_NAME} ${MAIN_PATH}
+      - go build -o={{.TARGET}} {{.MAIN_PATH}}
 
   run:
     desc: Run the application
     deps:
       - build
     requires:
-      vars: [BIN_PATH, BIN_NAME]
+      vars: [TARGET]
     cmds:
-      - ${BIN_PATH}/${BIN_NAME}
+      - "{{.TARGET}}"
 
   push:
     desc: Push changes to remote git repository
     cmds:
       - git push
+
+  clean:
+    desc: Remove build artifacts
+    ignore_error: true
+    cmds:
+      - rm {{.TARGET}} 2> /dev/null
