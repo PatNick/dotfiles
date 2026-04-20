@@ -28,7 +28,7 @@ tasks:
     desc: Initialize go repository with basename of PWD
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
-      - go mod init github.com/patnick/$(basename $(pwd))
+      - go mod init gitlab.com/patnick/$(basename $(pwd))
       - cp $HOME/tasks/go-tasks.yml '{{.USER_WORKING_DIR}}'/Taskfile.yml
 
   secret:
