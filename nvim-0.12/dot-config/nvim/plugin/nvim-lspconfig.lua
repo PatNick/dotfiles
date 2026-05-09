@@ -1,5 +1,5 @@
-vim.pack.add({ 'https://github.com/neovim/nvim-lspconfig' })
-vim.lsp.enable({ 'gopls' })
+vim.pack.add({ "gh:neovim/nvim-lspconfig" })
+vim.lsp.enable({ "gopls" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("my.lsp", {}),
