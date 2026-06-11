@@ -55,5 +55,3 @@ vim.api.nvim_create_autocmd("FileType", {
         pcall(vim.treesitter.start, ev.buf)
     end
 })
-vim.treesitter.language.add("go", { path = "/home/pat/.local/share/nvim/rocks/lib/luarocks/rocks-5.1/tree-sitter-go/0.0.44-1/parser/go.so" })
-vim.treesitter.language.register("go", { "go", } )
