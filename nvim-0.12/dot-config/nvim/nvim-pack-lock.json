@@ -4,10 +4,6 @@
       "rev": "a62e1083a3cfe8b6b206e7d3d33a51091df25357",
       "src": "gh:L3MON4D3/LuaSnip"
     },
-    "async.nvim": {
-      "rev": "7a1d7d49933fbe902b84b55f352a3b10fd587331",
-      "src": "https://github.com/lewis6991/async.nvim"
-    },
     "cmp-buffer": {
       "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "gh:hrsh7th/cmp-buffer"
@@ -75,10 +71,6 @@
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "gh:nvim-lua/plenary.nvim"
-    },
-    "refactoring.nvim": {
-      "rev": "29bada48407a9e00d670207d00bbdc0c46c5dc58",
-      "src": "https://github.com/theprimeagen/refactoring.nvim"
     },
     "telescope.nvim": {
       "rev": "5255aa27c422de944791318024167ad5d40aad20",
