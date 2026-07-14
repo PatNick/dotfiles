@@ -21,6 +21,8 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>return nil, err<CR>}<CR><esc>kkI<esc>")
 
+vim.keymap.set("n", "<leader>vu", function() vim.pack.update() end)
+
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("n", "<leader>x", "<cmd>silent !chmod +x %<CR>", { silent = true })
