@@ -49,9 +49,3 @@ end
 for k, v in pairs(globs) do
     vim.g[k] = v
 end
-
-vim.api.nvim_create_autocmd("FileType", {
-    callback = function(ev)
-        pcall(vim.treesitter.start, ev.buf)
-    end
-})
