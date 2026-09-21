@@ -65,7 +65,7 @@
       "src": "gh:nvim-treesitter/nvim-treesitter"
     },
     "nvim-web-devicons": {
-      "rev": "5f032a85be210cd1c6ac98861eb3b187ff3bd5eb",
+      "rev": "58447c1fca354bbf184425e4a8d01deecbd6f3c4",
       "src": "gh:nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
