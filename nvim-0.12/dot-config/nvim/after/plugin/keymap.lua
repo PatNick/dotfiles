@@ -20,6 +20,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>return nil, err<CR>}<CR><esc>kkI<esc>")
+vim.keymap.set("n", "<leader>ee", "Iif err := <esc>A; err != nil {<CR>}<esc>O")
 
 vim.keymap.set("n", "<leader>vu", function() vim.pack.update() end)
 
